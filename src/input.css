@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Golos+Text:wght@400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #B969D5;
+    --color-secondary: #222347;
+    --color-accent: #99F8B3;
+    --color-dark: #05050A;
+    --color-light: #DEE4FC;
+    --color-primary-light: #DF58CD;
+    --color-accent-light: #8AEED0;
+
+    --font-heading: 'Golos Text', sans-serif;
+    --font-text: 'Georama', sans-serif;
+}
+
+@layer base {
+    /* html {
+        font-size: 16px;
+        line-height: 1.5;
+    } */
+    body {
+        color: var(--color-white);
+        font-family: var(--font-text);
+        font-weight: 300;
+        background: var(--color-dark);
+    }
+}
+
+details[open] .icon-minus .iconPlus {
+    display: none;
+}
+details[open] .icon-minus .iconMinus {
+    display: block;
+}
+
+/* .intro-notas {
+    background: linear-gradient(transparent 5%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 100%);
+} */
+.content-notas p {
+    margin-bottom: 24px;
+}
+
+/* MEDIA */
+@media (min-width: 768px) {
+    body {
+        background: var(--color-dark) url(./img/hub-blur-01.svg) no-repeat left top / auto;
+    }
+}
