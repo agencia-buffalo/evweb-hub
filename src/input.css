@@ -15,10 +15,6 @@
 }
 
 @layer base {
-    /* html {
-        font-size: 16px;
-        line-height: 1.5;
-    } */
     body {
         color: var(--color-white);
         font-family: var(--font-text);
@@ -36,6 +32,25 @@ details[open] .icon-minus .iconMinus {
 
 .content-notas p {
     margin-bottom: 24px;
+}
+
+/* .swiper {
+    position: relative !important;
+    overflow: hidden !important;
+} */
+/* .swiper-wrapper {
+    display: flex !important;
+    transition: transform 0.3s ease !important;
+} */
+.swiper-slide {
+    width: 100% !important;
+    height: auto !important;
+}
+.swiper-pagination-bullet {
+    background: var(--color-light) !important;
+}
+.swiper-pagination-bullet-active {
+    background: var(--color-primary) !important;
 }
 
 

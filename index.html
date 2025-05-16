@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUB - Evweb</title>
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body class="home">
 
@@ -50,7 +51,7 @@
                             <video src="./src/video/hub-video-intro.mp4" autoplay loop muted playsinline class="object-center aspect-auto scale-[1.25]"></video>
                         </div>
                         <div class="hidden md:block absolute top-0 left-1/2 -ml-[460px]">
-                            <img src="./src/img/hub-bg-video.png" alt="HUB" class="max-w-[1080px]">
+                            <img src="./src/img/hub-bg-video.png" alt="HUB" class="w-full max-w-[1080px]">
                         </div>
                         <div class="hidden md:block md:absolute md:top-[470px] md:-left-16">
                             <svg width="279" height="178" viewBox="0 0 279 178" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -355,7 +356,7 @@
                     </div>
                 </div>
 
-                <div class="pt-20 bg-[url(./img/hub-numeros-bg.png)] bg-top bg-no-repeat bg-auto md:bg-cover md:pt-[275px] md:mt-36">
+                <div class="pt-20 bg-[url(./img/hub-numeros-bg.png)] bg-top bg-no-repeat bg-auto md:bg-cover md:pt-[275px] md:mt-12">
                     <!-- en numeros -->
                     <div class="container px-4 mx-auto flex flex-col items-center justify-center">
                         <div class="text-center relative mb-12">
@@ -429,6 +430,7 @@
                             <p class="text-lg">Evweb fue reconocida por los principales medios de la Argentina, <strong class="text-primary font-medium">como una de las healTech con mayor potencial del 2024.</strong></p>
                         </div>
                         <div>
+
                             <!-- notas desktop -->
                             <div class="hidden md:grid grid-cols-1 gap-4 px-8 md:grid-cols-4 md:gap-4 md:px-0">
                                 <article class="border border-light/10">
@@ -478,8 +480,72 @@
                             </div>
 
                             <!-- notas mobile -->
-                            
+                            <div class="w-full md:hidden">
 
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <article class="border border-light/10">
+                                                <a href="./src/pages/pharmabiz.html" target="_blank">
+                                                    <div class="relative">
+                                                        <img src="./src/pages/img/pharmabiz.png" alt="HUB" class="w-auto min-h-48 object-cover">
+                                                    </div>
+                                                    <div class="p-8">
+                                                        <div class="bg-primary inline-block uppercase font-medium text-xs p-1 mb-4">Pharmabiz</div>
+                                                        <h3 class="text-xl">EvWeb, nuevo canal médico farma</h3>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <article class="border border-light/10">
+                                                <a href="./src/pages/intramed.html" target="_blank">
+                                                    <div class="relative">
+                                                        <img src="./src/pages/img/intramed.png" alt="HUB" class="w-auto min-h-48 object-cover">
+                                                    </div>
+                                                    <div class="p-8">
+                                                        <div class="bg-primary inline-block uppercase font-medium text-xs p-1 mb-4">Intramed</div>
+                                                        <h3 class="text-xl">Asociaciones médicas en tiempos de streaming: adaptarse o quedar atrás</h3>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <article class="border border-light/10">
+                                                <a href="./src/pages/innova.html" target="_blank">
+                                                    <div class="relative">
+                                                        <img src="./src/pages/img/innova.png" alt="HUB" class="w-auto min-h-48 object-cover">
+                                                    </div>
+                                                    <div class="p-8">
+                                                        <div class="bg-primary inline-block uppercase font-medium text-xs p-1 mb-4">Innova</div>
+                                                        <h3 class="text-xl">Asociaciones médicas en tiempos de streaming: adaptarse o quedar atrás</h3>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <article class="border border-light/10">
+                                                <a href="./src/pages/infobae.html" target="_blank">
+                                                    <div class="relative">
+                                                        <img src="./src/pages/img/infobae.png" alt="HUB" class="w-auto min-h-48 object-cover">
+                                                    </div>
+                                                    <div class="p-8">
+                                                        <div class="bg-primary inline-block uppercase font-medium text-xs p-1 mb-4">Infobae</div>
+                                                        <h3 class="text-xl">Así funciona la startup que gestiona la facturación médica de la Argentina</h3>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <!-- Botones de navegación -->
+                                    <div class="swiper-button-next text-white!"></div>
+                                    <div class="swiper-button-prev text-white!"></div>
+                                    <!-- Paginación -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -530,11 +596,7 @@
 
 <script src="./src/js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Inicialización de Rellax.js
-    const rellax = new Rellax('.rellax');
-});
-</script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 </html>

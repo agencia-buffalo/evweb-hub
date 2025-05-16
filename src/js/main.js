@@ -1,5 +1,23 @@
-/* Accordion */
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Inicialización de Rellax.js
+    const rellax = new Rellax('.rellax');
+
+    // Inicialización de Swiper
+    const swiper = new Swiper('.mySwiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Inicialización del acordeón
     const initAccordion = (accordionContainer) => {
         const accordions = accordionContainer.querySelectorAll('details');
 
@@ -37,10 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa todos los contenedores de acordeón
     const accordionContainers = document.querySelectorAll('.accordion-container');
     accordionContainers.forEach(initAccordion);
-});
 
-/* Slide */
-document.addEventListener('DOMContentLoaded', () => {
+    // Inicialización del slider manual
     const sliderWrapper = document.querySelector('.slider-wrapper');
     const slides = document.querySelectorAll('.slider-wrapper img');
     const prevButton = document.getElementById('prev');
@@ -63,17 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSliderPosition();
     };
 
-    // Event Listeners
-    nextButton.addEventListener('click', showNextSlide);
-    prevButton.addEventListener('click', showPrevSlide);
-});
+    // Event Listeners para el slider manual
+    if (nextButton && prevButton) {
+        nextButton.addEventListener('click', showNextSlide);
+        prevButton.addEventListener('click', showPrevSlide);
+    }
 
-/* Counter */
-document.addEventListener('DOMContentLoaded', () => {
+    // Inicialización del contador animado
     const counters = document.querySelectorAll('.counter');
     const options = {
         root: null,
-        threshold: 0.1
+        threshold: 0.1,
     };
 
     const animateCounter = (counter) => {
@@ -97,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
                 animateCounter(counter);
@@ -106,5 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, options);
 
-    counters.forEach(counter => observer.observe(counter));
+    counters.forEach((counter) => observer.observe(counter));
+    
 });
